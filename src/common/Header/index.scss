@@ -1,0 +1,54 @@
+.container {
+  width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding: 0 20px;
+  z-index: 4;
+  background: #FFFFFF;
+
+  .backIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 18px;
+  }
+
+  .title {
+    font-family: 'Karla';
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: -0.9px;
+    font-weight: 700;
+  }
+
+  .liveIcon {
+    margin-left: auto;
+    font-family: 'Karla';
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    background: #EB2F22;
+    border-radius: 2.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 48px;
+    height: 20px;
+  }
+
+  .viewers {
+    margin-left: 10px;
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 12px;
+    color: rgba(#000000, 0.5);
+    letter-spacing: -0.5px;
+
+    .eyeIcon {
+      width: 16px;
+      margin-right: 4px;
+    }
+  }
+}

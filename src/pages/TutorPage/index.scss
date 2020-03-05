@@ -1,0 +1,171 @@
+.title {
+  color: cornflowerblue;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  height: 800px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  background: rgba(#131415, 0.02);
+}
+
+.lhs {
+  width: 68%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: column;
+  border-right: 1px solid rgba(#979797, 0.2);
+
+  &Bottom {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: flex-start;
+  }
+}
+
+.controlBar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  border-radius: 6px;
+  border: 1px solid #dbe2e5;
+  height: 46px;
+  display: flex;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+
+  .control {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    background: #e7e7e7;
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      cursor: none;
+    }
+
+    &.active {}
+  }
+}
+
+.publish {
+  width: 160px;
+  height: 86px;
+  z-index: 2;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  background-image: linear-gradient(270deg, rgba(82, 160, 232, 0.00) 0%, #52A0E8 50%);
+  background-image: linear-gradient(270deg, rgba(82, 160, 232, 0.00) 0%, #52A0E8 50%);
+  box-shadow: 0 4px 8px 0 #C9C9C9;
+
+  &.fullLayout {
+    width: 100%;
+    height: 100%;
+  }
+
+  &>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>video {
+      width: 100%;
+    }
+
+    &>div {
+      display: none;
+    }
+  }
+}
+
+.rhs {
+  width: 32%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+
+  &>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>video {
+      width: 100%;
+    }
+
+    &>div {
+      display: none;
+    }
+  }
+}
+
+
+.chat {
+  width: 100%;
+  height: 100%;
+
+}
+
+.action {
+  border-top: 4px solid #d8d8d8;
+  height: 240px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.teacherSide {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+
+.studentSide {
+  width: 50%;
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  flex-direction: column;
+  border-left: 4px solid #d8d8d8;
+}
+
+.stats {
+  display: hidden;
+}

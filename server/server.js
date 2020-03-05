@@ -4,6 +4,8 @@ const express = require("express");
 const compression = require("compression");
 const path = require("path");
 var cors = require("cors");
+const http = require("http");
+const io = require("socket.io");
 const bodyParser = require("body-parser");
 const logger = require("./middleware/logger");
 const { devMiddleware, hotMiddleware } = require("./middleware/webpack");
@@ -16,6 +18,14 @@ app.set("x-powered-by", false);
 
 app.use(compression());
 app.use(logger);
+
+const httpAppObj = http.Server(app);
+const ioHttp = io(httpAppObj);
+function onConnection(socket) {
+  socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
+}
+
+ioHttp.on('connection', onConnection);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("build"));
@@ -56,8 +66,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.resolve("build", "index.html"));
   } else {
     const x = path.resolve("build", "index.html");
-    console.log('x--------', x);
-    res.write(devMiddleware.fileSystem.readFileSync());
+    res.write(devMiddleware.fileSystem.readFileSync(x));
     res.end();
   }
 });

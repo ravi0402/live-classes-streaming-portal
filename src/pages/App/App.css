@@ -1,0 +1,95 @@
+.title {
+  color: cornflowerblue;
+}
+
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px;
+}
+
+.lhs {
+  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: column;
+  border: 4px solid #d7d7d7;
+}
+
+.rhs {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 4px solid #d7d7d7;
+}
+
+.desktop {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop>div>video {
+  width: 100%;
+}
+
+.student {
+  position: absolute;
+  left: 0;
+  bottom: 240px;
+  z-index: 3;
+}
+
+.tutor {
+  position: absolute;
+  left: 0;
+  bottom: 230px;
+  z-index: 3;
+}
+
+.tutor>div>video,
+.student>div>video {
+  width: 300px;
+}
+
+.chat {
+  width: 100%;
+  height: 100%;
+
+}
+
+.action {
+  border-top: 4px solid #d8d8d8;
+  height: 240px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.teacherSide {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+
+.studentSide {
+  width: 50%;
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  flex-direction: column;
+  border-left: 4px solid #d8d8d8;
+}
